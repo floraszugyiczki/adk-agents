@@ -1,0 +1,20 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Secrets: never commit real keys
+.env
+.env.*
+!.env.example
+
+# ADK local runtime data
+.adk/
+
+# Logs, editor, OS
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+# Direct dependencies of the ADK weather/time agent team.
+# Requires Python 3.10+. Developed on Python 3.14 (Windows 11).
+# For an exact snapshot of a working environment see requirements-lock.txt.
+google-adk==2.10.0
+requests>=2.32
+tzdata>=2024.1
