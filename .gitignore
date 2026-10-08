@@ -18,3 +18,7 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Chat logs
+chat_log.db
+chat_log.txt

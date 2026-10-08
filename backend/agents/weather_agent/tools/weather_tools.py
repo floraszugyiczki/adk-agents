@@ -1,5 +1,5 @@
 import requests
-from .geo import geocode, label
+from backend.tools.geo import geocode, label
 from google.adk.tools.tool_context import ToolContext
 
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"

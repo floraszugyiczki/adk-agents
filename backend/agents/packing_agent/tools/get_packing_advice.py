@@ -1,6 +1,6 @@
 import requests
-from .geo import geocode, label
-from .weather_tools import FORECAST_URL
+from backend.tools.geo import geocode, label
+from backend.agents.weather_agent.tools.weather_tools import FORECAST_URL
 
 SNOW_CODES = {71, 73, 75, 77, 85, 86}
 THUNDER_CODES = {95, 96, 99}

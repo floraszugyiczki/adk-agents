@@ -13,8 +13,3 @@ def say_hello(name: Optional[str] = None) -> str:
     if name:
         return f"Hello, {name}!"
     return "Hello there!"
-
-
-def say_goodbye() -> str:
-    """Provides a simple farewell message to conclude the conversation."""
-    return "Goodbye! Have a great day."

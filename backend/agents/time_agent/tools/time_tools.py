@@ -2,7 +2,7 @@ import datetime
 from zoneinfo import ZoneInfo
 
 import requests
-from .geo import geocode, label
+from backend.tools.geo import geocode, label
 
 
 def _resolve(city: str):

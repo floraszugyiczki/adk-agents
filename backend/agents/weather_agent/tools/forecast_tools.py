@@ -1,5 +1,5 @@
 import requests
-from .geo import geocode, label
+from backend.tools.geo import geocode, label
 from .weather_tools import FORECAST_URL, WMO_CODES
 
 

@@ -1,10 +1,15 @@
 from google.adk.agents import Agent
-from .config import MODEL
-from .weather_tools import get_weather
-from .forecast_tools import get_forecast
-from .time_tools import get_current_time, get_time_difference
-from .preference_tools import set_temperature_unit
-from .sub_agents import greeting_agent, farewell_agent, packing_agent
+from backend.config import MODEL
+from backend.agents.weather_agent.tools.weather_tools import get_weather
+from backend.agents.weather_agent.tools.forecast_tools import get_forecast
+from backend.agents.time_agent.tools.time_tools import get_current_time, get_time_difference
+from backend.tools.preference_tools import set_temperature_unit
+from backend.agents.greeting_agent.greeting_agent import greeting_agent
+from backend.agents.farewell_agent.farewell_agent import farewell_agent
+from backend.agents.packing_agent.packing_agent import packing_agent
+from backend.utility.logging import log_user, log_agent, log_tool
+from backend.utility.rehydration import rehydrate_history
+
 
 root_agent = Agent(
     name="weather_time_agent",
@@ -29,5 +34,9 @@ root_agent = Agent(
     ),
     tools=[get_weather, get_forecast, get_current_time, get_time_difference, set_temperature_unit],
     sub_agents=[greeting_agent, farewell_agent, packing_agent],
-    output_key="last_weather_report"
+    output_key="last_weather_report",
+    before_agent_callback=log_user,
+    before_model_callback=rehydrate_history,
+    after_model_callback=log_agent,
+    after_tool_callback=log_tool,
 )

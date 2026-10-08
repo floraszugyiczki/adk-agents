@@ -5,7 +5,8 @@ Run from the repository root:
     python check_setup.py
 
 Verifies the Python version, the API key file, package imports, the agent
-structure and every tool against the live Open-Meteo API. It sends NO
+structure, the chat log and rehydration code (offline, on a temporary
+database), and every tool against the live Open-Meteo API. It sends NO
 requests to Gemini, so it does not use any model quota.
 """
 import sys
@@ -14,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-ENV_FILE = ROOT / "multi_tool_agent" / ".env"
+ENV_FILE = ROOT / "backend" / ".env"
 PLACEHOLDER = "PASTE_YOUR_KEY_HERE"
 
 
@@ -32,11 +33,11 @@ def check_python():
 
 def check_env_file():
     if not ENV_FILE.exists():
-        return False, "multi_tool_agent/.env not found - copy multi_tool_agent/.env.example to multi_tool_agent/.env"
+        return False, "backend/.env not found - copy .env.example to backend/.env"
     try:
         text = ENV_FILE.read_text(encoding="utf-8")
     except UnicodeDecodeError:
-        return False, "multi_tool_agent/.env is not UTF-8 - recreate it in a text editor"
+        return False, "backend/.env is not UTF-8 - recreate it in a text editor"
     for line in text.splitlines():
         if line.strip().startswith("GOOGLE_API_KEY"):
             value = line.split("=", 1)[-1].strip().strip('"').strip("'")
@@ -46,7 +47,7 @@ def check_env_file():
 
 
 def check_agent_structure():
-    from multi_tool_agent.agent import root_agent
+    from backend.main import root_agent
 
     tool_names = [getattr(t, "__name__", str(t)) for t in root_agent.tools]
     sub_names = [a.name for a in root_agent.sub_agents]
@@ -54,13 +55,71 @@ def check_agent_structure():
     return ok, f"root tools={tool_names}; sub-agents={sub_names}"
 
 
+def check_rehydration_import():
+    from backend.utility.rehydration import MAX_MESSAGES, load_history, rehydrate_history
+
+    ok = callable(load_history) and callable(rehydrate_history)
+    return ok, f"load_history and rehydrate_history found (MAX_MESSAGES={MAX_MESSAGES})"
+
+
+def check_invocation_id_column():
+    from backend.utility.logging import conn
+
+    columns = [r[1] for r in conn.execute("PRAGMA table_info(messages)")]
+    return "invocation_id" in columns, f"messages columns: {', '.join(columns)}"
+
+
+def check_load_history():
+    """load_history() on a temporary database: order, tool rows skipped, current turn excluded."""
+    import sqlite3
+    import tempfile
+
+    import backend.utility.rehydration as rehydration
+
+    rows = [
+        ("s1", "user", "Hello", None),  # logged before invocation_id existed
+        ("s1", "greeting_agent", "Hi there!", None),
+        ("s1", "user", "Weather in Oslo?", "inv-1"),
+        ("s1", "tool", None, "inv-1"),
+        ("s1", "weather_time_agent", "It is 5 °C in Oslo.", "inv-1"),
+        ("s1", "user", "What did I ask?", "inv-2"),  # the current turn
+        ("s2", "user", "Other session", "inv-9"),
+    ]
+    expected = [
+        {"role": "user", "text": "Hello"},
+        {"role": "model", "text": "Hi there!"},
+        {"role": "user", "text": "Weather in Oslo?"},
+        {"role": "model", "text": "It is 5 °C in Oslo."},
+    ]
+    original_conn = rehydration.conn
+    with tempfile.TemporaryDirectory() as tmp:
+        test_conn = sqlite3.connect(Path(tmp) / "test_log.db")
+        try:
+            test_conn.execute(
+                "CREATE TABLE messages (id INTEGER PRIMARY KEY AUTOINCREMENT, session_id TEXT, "
+                "role TEXT, content TEXT, invocation_id TEXT)"
+            )
+            test_conn.executemany(
+                "INSERT INTO messages (session_id, role, content, invocation_id) VALUES (?,?,?,?)", rows
+            )
+            rehydration.conn = test_conn
+            history = rehydration.load_history("s1", "inv-2")
+        finally:
+            rehydration.conn = original_conn
+            test_conn.close()
+    if history == expected:
+        return True, f"{len(history)} messages in order, tool row and current turn skipped"
+    return False, f"unexpected history: {history}"
+
+
 def build_tool_checks():
-    from multi_tool_agent.forecast_tools import get_forecast
-    from multi_tool_agent.greeting_tools import say_goodbye, say_hello
-    from multi_tool_agent.packing_tools import get_packing_advice
-    from multi_tool_agent.preference_tools import set_temperature_unit
-    from multi_tool_agent.time_tools import get_current_time, get_time_difference
-    from multi_tool_agent.weather_tools import get_weather
+    from backend.agents.farewell_agent.tools.say_goodbye import say_goodbye
+    from backend.agents.greeting_agent.tools.say_hello import say_hello
+    from backend.agents.packing_agent.tools.get_packing_advice import get_packing_advice
+    from backend.agents.time_agent.tools.time_tools import get_current_time, get_time_difference
+    from backend.agents.weather_agent.tools.forecast_tools import get_forecast
+    from backend.agents.weather_agent.tools.weather_tools import get_weather
+    from backend.tools.preference_tools import set_temperature_unit
 
     ctx = FakeToolContext()
 
@@ -109,6 +168,9 @@ def main():
         run("python version", check_python),
         run("api key file", check_env_file),
         run("agent structure", check_agent_structure),
+        run("rehydration import", check_rehydration_import),
+        run("log schema invocation_id", check_invocation_id_column),
+        run("load_history on temp db", check_load_history),
     ]
     try:
         for name, fn in build_tool_checks():
