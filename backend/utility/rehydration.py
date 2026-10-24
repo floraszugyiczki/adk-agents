@@ -1,19 +1,24 @@
 from google.genai import types
 
-from backend.utility.logging import conn
+from sqlalchemy import or_, select
+from backend.utility.db import SessionLocal, Message
 
 MAX_MESSAGES = 20  # how many logged messages to restore at most
 
 
 def load_history(session_id, current_invocation_id, limit=MAX_MESSAGES):
     """Read the last `limit` user/agent messages of a session from chat_log.db."""
-    rows = conn.execute(
-        "SELECT role, content FROM messages "
-        "WHERE session_id = ? AND role != 'tool' AND content IS NOT NULL "
-        "AND (invocation_id IS NULL OR invocation_id != ?) "
-        "ORDER BY id DESC LIMIT ?",
-        (session_id, current_invocation_id, limit),
-    ).fetchall()
+    query = (
+        select(Message.role, Message.content)
+        .where(Message.session_id == session_id)
+        .where(Message.role != "tool")
+        .where(Message.content.is_not(None))
+        .where(or_(Message.invocation_id.is_(None), Message.invocation_id != current_invocation_id))
+        .order_by(Message.id.desc())
+        .limit(limit)
+    )
+    with SessionLocal() as db:
+        rows = db.execute(query).all()
     rows.reverse()  # oldest first
     history = [
         {"role": "user" if role == "user" else "model", "text": text}

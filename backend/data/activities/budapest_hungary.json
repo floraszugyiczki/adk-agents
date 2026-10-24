@@ -1,0 +1,432 @@
+{
+  "status": "success",
+  "city": "Budapest",
+  "country": "Hungary",
+  "see": [
+    {
+      "name": "Church of Saint Margaret of Hungary",
+      "type": "see",
+      "description": "Commonly called as Lehel church. Built in 1933. In it took up the name of Margaret, after canonization.",
+      "latitude": 47.51694,
+      "longitude": 19.06056,
+      "url": "http://www.margitos.hu/index1.html"
+    },
+    {
+      "name": "Lady of Mount Carmel church and monastery",
+      "type": "see",
+      "description": "The monastery and chapel designed by the main architect of Budapest in 1895. The consecration was held in 1896. The church was inaugurated on 15 October 1899, at which Emperor Franz Joseph I also participated. A local ma",
+      "latitude": 47.52484,
+      "longitude": 19.06719,
+      "url": "http://www.karmelitarend.hu/budapesti-rendhaz-karmelhegyi-boldogasszony-templom",
+      "hours": "Masses Mon-Sat 07:00, 18:00, Sun 9:00, 10:30, 18:00. Every day: 16:50, 17:30"
+    },
+    {
+      "name": "Angyalföldi St. Ladislaus Parish Church",
+      "type": "see",
+      "description": "Built in Gothic-style. A Latin cross plan, three-nave church with a semicircular apse. It has a main tower with two smaller ones and also a Hussar tower. The bronze Stations of the Cross images made by a local artist. Th",
+      "latitude": 47.53073,
+      "longitude": 19.08136,
+      "url": "http://beketer.ghost.hu/",
+      "hours": "Masses Mon-Wed 07:30, Wed-Sat 18:00, Sun 07:30, 09:00, 10:30 and 18:00"
+    },
+    {
+      "name": "Parish Church of the help of Mary Christians",
+      "type": "see",
+      "description": "Built in 1943, the bell tower just in 1946.",
+      "latitude": 47.54199,
+      "longitude": 19.09061,
+      "url": "http://miserend.hu/?templom=2443"
+    },
+    {
+      "name": "St. Augustine's Chapel",
+      "type": "see",
+      "description": "1950",
+      "latitude": 47.51561,
+      "longitude": 19.0495
+    },
+    {
+      "name": "Reformed Church of the Budapest-Angyalföldi Congregation",
+      "type": "see",
+      "description": "The congregation was founded in 1911 as a mission parish. The church was built between 1927 and 1933 by the plans of two local architects. A 490-kg bell can be find on the tower. The two-manual organ has sixteen register",
+      "latitude": 47.53446,
+      "longitude": 19.07841,
+      "url": "http://www.frangepan.hu",
+      "hours": "Worship every Sun at 10:00. If the church closed ask the key for Clergyman's office: Mon 14:00-17:00, Wed 09:00-12:00 and 14:00-17:00, Fri 09:00-12:00",
+      "price": "Free of charge"
+    },
+    {
+      "name": "Reformed Church at the Pozsonyi road",
+      "type": "see",
+      "description": "This Protestant church was consecrated in 1940. Here, in Pozsonyi Road Cultural Centre, various events are held.",
+      "latitude": 47.52181,
+      "longitude": 19.053,
+      "url": "http://pozsonyiuti.reformatus.hu/portal/index.php?option=com_content&view=article&id=47&Itemid=54",
+      "hours": "Office: Mon Fri 10:00-12:00, Mon Wed Fri 17:00-18:00"
+    },
+    {
+      "name": "Angyalföld Lutheran church",
+      "type": "see",
+      "description": "Lutheran Church of the Budapest-Angyalföldi Congregation stay on the Angyalfold Kassák street since 1938. The Second World War brought massive destruction. After the war finished church bell is now the largest Protestant",
+      "latitude": 47.52179,
+      "longitude": 19.06473,
+      "url": "http://angyalfold.lutheran.hu/",
+      "hours": "Worship: Sun 10:00"
+    },
+    {
+      "name": "Former Arena synagogue",
+      "type": "see",
+      "description": "Former Dózsa György road was called Aréna road, for this reason the name Arena. Built in 1909. Today here is the fencing hall of the Budapest Honved Sport Club.",
+      "latitude": 47.52227,
+      "longitude": 19.0672,
+      "url": "http://mazsihisz.hu/zsinagogak-8.html"
+    },
+    {
+      "name": "Hegedűs Gyula Street's Synagogue",
+      "type": "see",
+      "description": "Built in 1911, based on the plans of Béla Vajda. In 1927 Baumhorn`s Leopold, a famous synagogue architect, expanded the church.",
+      "latitude": 47.51219,
+      "longitude": 19.052538,
+      "url": "http://mazsihisz.hu/zsinagogak-8.html"
+    },
+    {
+      "name": "Visegrad Street's Synagogue",
+      "type": "see",
+      "description": "At the end of 1940s, a former large apartment, transformed into a prayer house. It has been renovated; its main attraction is the lavishly decorated Aron HaKodesh (Torah ark). The main sights of prayer room: the Torah Ca",
+      "latitude": 47.51177,
+      "longitude": 19.054259,
+      "url": "http://mazsihisz.hu/zsinagogak-8.html"
+    },
+    {
+      "name": "Kingdom Hall",
+      "type": "see",
+      "description": "- A five-level religious complex. Built for the local Jehovah's Witnesses community",
+      "url": "http://www.jw.org/hu/"
+    },
+    {
+      "name": "National Center of the Hungarian Islamic Community",
+      "type": "see",
+      "latitude": 47.5229,
+      "longitude": 19.0829
+    },
+    {
+      "name": "St. Michael's Parish Church",
+      "type": "see",
+      "description": "Built in neo-Roman style sacrified in 1930. The painted glass windows of the church are show the most famous Hungarian saints. The two side altars made honor to Heart of Jesus and the Virgin Mary's. The glory of Jesus Ch",
+      "latitude": 47.54735,
+      "longitude": 19.077182,
+      "url": "http://szentmihaly.hu/",
+      "hours": "Services at 09:00, 10:30, and 18:30; the Holy Mass at 07:00 from second half of June will be held",
+      "price": "Free of charge"
+    },
+    {
+      "name": "Ferenc Koka collection",
+      "type": "see",
+      "description": "exhibition about the permanent collection of Ferenc Koka- paintings, pastels, drawings",
+      "latitude": 47.51217,
+      "longitude": 19.05386,
+      "hours": "Daily 15:00-19:00"
+    },
+    {
+      "name": "Danube Gallery",
+      "type": "see",
+      "description": "Contemporary art and design exhibitions",
+      "latitude": 47.52542,
+      "longitude": 19.05902,
+      "hours": "Tue-Sun 10:00-18:00"
+    },
+    {
+      "name": "Pinball Museum",
+      "type": "see",
+      "description": "A museum of pinball machines with 130 playable machines new and old. All games are set to free mode, so no coins are required. Includes machines from the late 19th century until today.",
+      "latitude": 47.51472,
+      "longitude": 19.05433,
+      "url": "http://www.flippermuzeum.hu",
+      "hours": "Wed-Fri 16:00-00:00, Sat 14:00-00:00, Sun 10:00-22:00",
+      "price": "Ft2500"
+    },
+    {
+      "name": "Hungarian Rock Hall of Fame",
+      "type": "see",
+      "description": "A famous samurai head T-shirt of Béla Radics, a number of guitar and drum set, \"contemporary\" and recorders, microphones, first and last guitars of Levente Szörényi, Omega band smoke machine, the studio of Radio Free Eur",
+      "latitude": 47.52279,
+      "longitude": 19.057117,
+      "url": "http://www.rockcsarnok.hu/",
+      "hours": "Sat 10:00-18:00, Sun 10:00-18:00",
+      "price": "Ft1000 with photo permit"
+    },
+    {
+      "name": "Angyalföldi Local History Collection",
+      "type": "see",
+      "description": "The nearly 20,000-piece collection of objects contents mainly furniture, everyday use items, pieces of clothing, home textiles, tools, memorabilia. Archival Material (7,000 items) consists of certificates, passports, off",
+      "latitude": 47.54617,
+      "longitude": 19.08256,
+      "url": "http://www.kult13.hu/intezmenyeink/angyalfoldi-helytorteneti-gyujtemeny/hirek.html",
+      "hours": "Tue-Fri 10:00-18:00, Sat 15:00-19:00, on the 13th day of each month: 10:00-22:00"
+    },
+    {
+      "name": "Újlipótvárosi Club Gallery",
+      "type": "see",
+      "description": "Periodically changing fine art and applied art exhibitions. Also literary, musical events will be held here.",
+      "latitude": 47.51544,
+      "longitude": 19.05167,
+      "url": "http://www.kult13.hu/intezmenyeink/ujlipotvarosi-klub-galeria/kiallitasok.html",
+      "hours": "Mon-Fri 14:00-20:00"
+    },
+    {
+      "name": "Studio 1900 Gallery",
+      "type": "see",
+      "description": "Contemporary art exhibitions and shopping.",
+      "latitude": 47.51594,
+      "longitude": 19.05483,
+      "url": "http://studio1900galeria.hu/",
+      "hours": "Mon-Fri 10:00-18:00"
+    },
+    {
+      "name": "Lehel Hall",
+      "type": "see",
+      "description": "- A covered multilevel marketplace. Because its form, colloquially known as 'Kofahajó' (Ship for retailers without shop), Built in 2000-2002, in postmodern style. Before 1890 here was a cemetery. Later was a lumberyard, ",
+      "latitude": 47.51828,
+      "longitude": 19.061402
+    },
+    {
+      "name": "Margaret Bridge",
+      "type": "see",
+      "description": "Margaret Bridge is a three-way bridge connecting Óbuda and northern end of 'Grand Boulevard' of Pest across the Danube. It is the second northernmost public road bridge in Budapest. It was designed by French engineer and",
+      "hours": "24/7",
+      "price": "Free"
+    },
+    {
+      "name": "Witch Museum",
+      "type": "see",
+      "description": "A Hungarian witch is the exhibition guide, who presents the exhibition devices, the history of witchcraft, and respond to questions. Interactive exhibition, some of the objects can hand-held and can be tested. About 1 ho",
+      "latitude": 47.51351,
+      "longitude": 19.05477,
+      "url": "http://www.boszorkanymuzeum.hu",
+      "hours": "Mon 20:30-22: 00 Sat 13:00-15:30; 20:30-22: 00 Wed 13:00-17:30; 20:30-22:00 Thu 13:00-19:00; 21:00-22:30 Fri 13:00-22:00 Sat 13:00-22:00 Sun closed. Only guided tours",
+      "price": "Ft800-2000"
+    },
+    {
+      "name": "Historical tram depot in Újpest",
+      "type": "see",
+      "description": "Now is a supermarket.",
+      "latitude": 47.55903,
+      "longitude": 19.07801
+    }
+  ],
+  "do": [
+    {
+      "name": "Hungaria Koncert",
+      "type": "do",
+      "description": "Operates cruises with lunch or dinner daily at 14:00, 19:00 and 20:00. This service is 90 minutes with hot buffet lunch or dinner. During the cruise, the Parliament, Chain Bridge, Royal Castle, Palace of Arts, etc. can b",
+      "url": "http://www.hungariakoncert.hu"
+    },
+    {
+      "name": "Budapest Spring Festival",
+      "type": "do",
+      "description": "In March, a dazzling variety of cultural events mainly revolving around classical music and performing arts - including folklore.",
+      "url": "http://www.btf.hu/"
+    },
+    {
+      "name": "Firework above Danube River",
+      "type": "do",
+      "description": "National Holiday. Sound & light show with fireworks. Around half hour open air show.",
+      "hours": "21:00 on 20 Aug",
+      "price": "Free except if you wish to see from the air"
+    },
+    {
+      "name": "Jewish Summer Festival",
+      "type": "do",
+      "description": "Another array of cultural and music events, with a Jewish touch.",
+      "url": "http://www.zsidokulturalisfesztival.hu/"
+    },
+    {
+      "name": "Margitsziget Athletics Centre (MAC)",
+      "type": "do",
+      "latitude": 47.51765,
+      "longitude": 19.04342,
+      "url": "http://www.margitsziget.com/",
+      "hours": "Mon-Sun 96:00-22:00 (Apr-Oct); Mon-Fri 07:00-21:00, Sat Sun 07:00-20:00",
+      "price": "Entry fee: Ft1000. Includes access to: clocker room, washing facilities, lockers, gym, athletic-, street-ball-, foot tennis court and table tennis."
+    },
+    {
+      "name": "Sandor Iharos Athletic Field",
+      "type": "do",
+      "latitude": 47.52311,
+      "longitude": 19.07042
+    },
+    {
+      "name": "Dagály Spa",
+      "type": "do",
+      "description": "There is an outdoor 50-m lap pool open year round and a covered-in-winter 25-m lap pool. There are 2 large outdoor hot baths. One heated to 33°C and the other to 36°C. In summer, several huge pools are also available and",
+      "latitude": 47.53988,
+      "longitude": 19.06116,
+      "url": "http://www.dagalyfurdo.hu/",
+      "hours": "Daily 06:00–20:00",
+      "price": "~€8. full day, €6 after 16:00. An attendant locks your clothes in a locker. Tip Ft100 on your way out"
+    },
+    {
+      "name": "Danubius Grand Hotel/Thermal Hotel Margitsziget",
+      "type": "do",
+      "description": "High-level and modern baths and spa also offers a great choice of medical treatment. There are two body-temperature soaking pools and a cold-water corridor with stones on the floor; one swimming pool; separate steam bath",
+      "latitude": 47.53358,
+      "longitude": 19.05243,
+      "url": "http://www.danubiushotels.com/en/budapest-hotels/danubius-grand-hotel-margitsziget-budapest/wellness-fitness",
+      "hours": "until 21:30",
+      "price": "Admission fee (Ft5,700 weekdays, Ft7,000 weekends) doesn't limit your time inside, and gives access to all spa facilities including a great gym (remember to bring your fitness suit). Solarium and medical treatments should be paid separately, remember before entering the changing rooms (Ft1,300 for 10 minutes)"
+    },
+    {
+      "name": "The Palatinus Outdoor Baths",
+      "type": "do",
+      "description": "have three pools filled with therapeutic water—and a total of 11 pools (totaling 17.5 ha). In front of the baths is a beautiful rose garden, and nearby, an open-air stage where opera and ballet performances are held, plu",
+      "latitude": 47.52783,
+      "longitude": 19.04694,
+      "url": "http://www.palatinusstrand.hu/",
+      "price": "Adult €9-11, student €6.5-7.3, adult afternoon from 16:00 €6.5"
+    },
+    {
+      "name": "G1 Kart Center",
+      "type": "do",
+      "description": "8.5 horsepower Hondas.",
+      "latitude": 47.52813,
+      "longitude": 19.07439,
+      "url": "http://g1kartcenter.hu",
+      "hours": "Mon-Fri 15:00-22:00, Sat Sun 10:00-22:00",
+      "price": "€6 for 8 min"
+    },
+    {
+      "name": "People Island",
+      "type": "do",
+      "description": "Walking, biking, relaxing. WWater sports. Angling.",
+      "latitude": 47.55996,
+      "longitude": 19.07243
+    },
+    {
+      "name": "Park of Szent István",
+      "type": "do",
+      "description": "Monument area. More than three hectares. Build between 1930-1938. A recreation park with playgrounds, sports space, chess tables, ping-pong tables. The site also provides place for different cultural events, as the summe",
+      "latitude": 47.51839,
+      "longitude": 19.0505,
+      "url": "https://welovebudapest.com/en/venue/szent-istvan-park-2/",
+      "hours": "24/7",
+      "price": "Free except events"
+    },
+    {
+      "name": "Öko Playground",
+      "type": "do",
+      "description": "An environment friend place for kids.",
+      "latitude": 47.53662,
+      "longitude": 19.05388,
+      "price": "Free"
+    },
+    {
+      "name": "Pbal Gallery: The Hungarian Pinball Museum",
+      "type": "do",
+      "description": "A museum of pinball machines with 130 playable machines new and old. All games are set to free mode, so no coins are required.",
+      "url": "http://www.flippermuzeum.hu",
+      "hours": "Wed-Sun 16:00 - 24:00",
+      "price": "Ft500"
+    },
+    {
+      "name": "Ujpest Torna Egylet Tennis stadium",
+      "type": "do",
+      "description": "Former owner was theÚjpesti Torna Egylet (UTE), a Hungarian sports society, based in Újpest. Some part of the place is dilapidated. Planned remodelling the all complex.",
+      "latitude": 47.53081,
+      "longitude": 19.04799,
+      "hours": "Temporarily Closed"
+    },
+    {
+      "name": "Attila József Theatre",
+      "type": "do",
+      "description": "Former Déryné Stage in a building which was built as a culture house, and used as a chamber theater of the Comedy theater",
+      "latitude": 47.5316,
+      "longitude": 19.06713,
+      "url": "http://www.jozsefattilaszinhaz.hu/",
+      "price": "Ft1500-3500"
+    },
+    {
+      "name": "Comedy Theatre",
+      "type": "do",
+      "description": "One of the most popular and longest history theater in Budapest. It has three playground places, the Big stage (Nagyszínpad), Studio and chamber named Home Stage (Házi Színpad nevű stúdió és kamarája), and the Pesti Thea",
+      "url": "http://vigszinhaz.hu/english/index.php",
+      "hours": "The Box Office open: 11:00-19:00.",
+      "price": "Ft1300-4000"
+    },
+    {
+      "name": "Experidance Company",
+      "type": "do",
+      "description": "This popular company performs Hungarian popular dances in modern conception. Performances mostly in RaM Colosseum.",
+      "latitude": 47.52281,
+      "longitude": 19.05682,
+      "url": "http://www.experidance.hu",
+      "hours": "At 15:00, or 19:00",
+      "price": "~2800&nbsp;Ft"
+    },
+    {
+      "name": "Ram Colosseum, Újlipótvárosi Community House",
+      "type": "do",
+      "description": "A multi-cultural and leisure center in Újlipótváros quarter. The community center consists of four wings, which are connected by a central plaza. The institution's five main unit includes: a 600-seat auditorium. The oval",
+      "latitude": 47.52281,
+      "longitude": 19.05682,
+      "url": "http://www.ram13.hu/"
+    },
+    {
+      "name": "Open-air theatre",
+      "type": "do",
+      "description": "The accommodating an audience of 3300. Built in 1938, according to plan of Peter Kaffka. In World War II, it was heavily damaged, and rebuilt in 1951. Since 1991 named Open Space Theatre (Szabad Tér Színház). The program",
+      "latitude": 47.52999,
+      "longitude": 19.05007,
+      "url": "http://www.szabadter.hu/"
+    },
+    {
+      "name": "Baltazár Theatre",
+      "type": "do",
+      "latitude": 47.56862,
+      "longitude": 19.04667,
+      "url": "http://baltazarszinhaz.hu/",
+      "price": "Ticket:"
+    },
+    {
+      "name": "Békásmegyer Community House",
+      "type": "do",
+      "description": "A branch of the Óbuda Cultural Center.",
+      "latitude": 47.59798,
+      "longitude": 19.05256,
+      "url": "https://kulturkozpont.hu/haz/bekasmegyeri-kozossegi-haz/",
+      "hours": "Mon–Fri 08:00–20:00"
+    },
+    {
+      "name": "Csillaghegy Community House",
+      "type": "do",
+      "description": "A branch of the Óbuda Cultural Center.",
+      "latitude": 47.58571,
+      "longitude": 19.04729,
+      "url": "https://kulturkozpont.hu/haz/csillaghegyi-kozossegi-haz/",
+      "hours": "Mon–Fri 09:00–21:00"
+    },
+    {
+      "name": "Kaszásdűlő Cultural Center 3K",
+      "type": "do",
+      "description": "A branch of the Óbuda Cultural Center.",
+      "latitude": 47.55734,
+      "longitude": 19.04372,
+      "url": "https://kulturkozpont.hu/haz/3k-kaszasduloi-kulturalis-kozpont/",
+      "hours": "Mon–Fri 09:00–21:00"
+    },
+    {
+      "name": "Római Coastal Promenade",
+      "type": "do",
+      "description": "long coastal promenade close to the river. It is well known among inhabitants – and increasingly among tourists – as a local recreational area, natural reserve, water sports facility, and – predominately between spring a",
+      "latitude": 47.57349,
+      "longitude": 19.06544,
+      "price": "Free to visit"
+    }
+  ],
+  "sources": [
+    "https://en.wikivoyage.org/wiki/Budapest",
+    "https://en.wikivoyage.org/wiki/Budapest/Angyalföld",
+    "https://en.wikivoyage.org/wiki/Budapest/Aquincum",
+    "https://en.wikivoyage.org/wiki/Budapest/Bel-Buda"
+  ],
+  "license": "Wikivoyage, CC BY-SA 4.0",
+  "retrieved": "2026-10-22"
+}

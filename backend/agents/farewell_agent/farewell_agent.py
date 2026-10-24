@@ -1,14 +1,14 @@
 from google.adk.agents import Agent
-from backend.config import MODEL
+from backend.config import MODEL, AGENTS
 from backend.agents.farewell_agent.tools.say_goodbye import say_goodbye
 from backend.utility.logging import log_user, log_agent, log_tool
 from backend.utility.rehydration import rehydrate_history 
 
 
 farewell_agent = Agent(
-    name="farewell_agent",
+    name=AGENTS["farewell"]["name"],
     model=MODEL,
-    description="Handles simple farewells and goodbyes using the 'say_goodbye' tool.",
+    description=AGENTS["farewell"]["description"],
     instruction=(
         "You are the Farewell Agent. Your ONLY task is to provide a polite goodbye "
         "using the 'say_goodbye' tool when the user is leaving or ending the conversation. "

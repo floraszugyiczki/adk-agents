@@ -1,13 +1,13 @@
 from google.adk.agents import Agent
-from backend.config import MODEL
+from backend.config import MODEL, AGENTS
 from backend.agents.greeting_agent.tools.say_hello import say_hello
 from backend.utility.logging import log_user, log_agent, log_tool
 from backend.utility.rehydration import rehydrate_history 
 
 greeting_agent = Agent(
-    name="greeting_agent",
+    name=AGENTS["greeting"]["name"],
     model=MODEL,
-    description="Handles simple greetings and hellos using the 'say_hello' tool.",
+    description=AGENTS["greeting"]["description"],
     instruction=(
         "You are the Greeting Agent. Your ONLY task is to provide a friendly greeting "
         "using the 'say_hello' tool. If the user gives their name, pass it to the tool. "

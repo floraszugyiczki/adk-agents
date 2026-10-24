@@ -1,0 +1,122 @@
+{
+  "status": "success",
+  "city": "Prague",
+  "country": "Czechia",
+  "see": [
+    {
+      "name": "Prague Visitor Pass",
+      "type": "see",
+      "description": "The official city pass providing free public transport, a free ticket to ride on the vintage tram line 42 as well as free entry to various city attractions.",
+      "url": "https://www.praguevisitorpass.eu/",
+      "price": "2700 Kč"
+    },
+    {
+      "name": "Prague Cool Pass",
+      "type": "see",
+      "description": "An unofficial pass available for 1, 2 or 3 days. Includes a bus city tour and a river cruise. Free entry to Prague Castle – St.Vitus Cathedral, Royal Palace, Golden Lane, St.George's Basilica. Free entry to Jewish Museum",
+      "url": "https://praguecoolpass.com/",
+      "price": "Adult: €64 - 1 day, €88 - 2 days, €108 - 3 days"
+    },
+    {
+      "name": "Prague City Pass",
+      "type": "see",
+      "description": "An unofficial pass providing free entry to various attractions in Prague within a 30 days period, various 25% discounts, sightseeing tours. Prague Castle – Old Royal Palace with Vladislav Hall, St. George‘s Basilica, Gol",
+      "url": "http://www.praguecitypass.com/en/",
+      "price": "1390 Kč"
+    },
+    {
+      "name": "National Gallery Gift Ticket",
+      "type": "see",
+      "description": "If you are an art lover and you are staying in Prague for a longer time, a dárková vstupenka (gift ticket) for National Gallery may save you money. The ticket is valid for a year and is valid in all exhibitions (both per",
+      "price": "450 Kč"
+    }
+  ],
+  "do": [
+    {
+      "name": "Prague Spring",
+      "type": "do",
+      "description": "The most famous classical music festival in the Czech republic.",
+      "url": "http://www.festival.cz"
+    },
+    {
+      "name": "Prague Advent Choral Meeting",
+      "type": "do",
+      "url": "http://www.pragueadvent.cz"
+    },
+    {
+      "name": "Signal Festival",
+      "type": "do",
+      "description": "A weekend in October, during which many historic buildings are lighted by spectacular video-mappings and many light-and-sound installations are set up at different places in the city centre, Vinohrady and Karlín.",
+      "url": "https://www.signalfestival.com/en/"
+    },
+    {
+      "name": "Wine Boat",
+      "type": "do",
+      "description": "The 1-hour cruise includes a visit of Prague Venice river canal as well as wine tasting of local wines.",
+      "url": "https://www.wineboat.cz"
+    },
+    {
+      "name": "Prague Steam Boats",
+      "type": "do",
+      "description": "Offer one hour cruises, as well as cruises to the Zoo and full day cruises to Slapy water dam. If you have the time for a 3-hour dinner cruise, you will certainly enjoy viewing the city from the river, while savouring a ",
+      "url": "https://www.praguesteamboats.com"
+    },
+    {
+      "name": "Cruise Prague",
+      "type": "do",
+      "description": "Offers a wide range of regular and private cruises.",
+      "url": "http://www.cruise-prague.cz"
+    },
+    {
+      "name": "EVD",
+      "type": "do",
+      "url": "https://www.evd.cz/en"
+    },
+    {
+      "name": "JazzBoat",
+      "type": "do",
+      "description": "Combines cruising and jazz concerts.",
+      "url": "http://www.jazzboat.cz"
+    },
+    {
+      "name": "Football",
+      "type": "do",
+      "description": "The city's leading soccer team is SK Slavia Praha. They play in the First League, the top tier, and often qualify for European tournaments. They play at the 21,000 capacity Fortuna Arena, which is also the usual venue fo"
+    },
+    {
+      "name": "We Bike Prague",
+      "type": "do",
+      "description": "With We Bike Prague team you can easily discover the city of Prague and the area around. Very good quality bike to rent for you self guided trip in the city and multidays trip through the countryside. We Bike Prague is a",
+      "url": "http://www.webikeprague.com",
+      "hours": "09:00-19:30"
+    },
+    {
+      "name": "BIKO Adventures Prague",
+      "type": "do",
+      "description": "BIKO offers mountain bike, road bike and outdoor activities off the beaten track in Prague and in the Czech Republic. From easy to advanced. High end bike rental: touring bikes, hardtail and full suspension MTB, road bik",
+      "url": "http://www.bikoadventures.com",
+      "hours": "09:00-13:00, 15:00-19:00"
+    },
+    {
+      "name": "Prague Tours Center",
+      "type": "do",
+      "description": "A free offer for the visitors of Prague: the Prague Tours Centre is offering free connection and charge up of your electric bikes and Segway PT. While connected, the devices are guarded by a supervisor and, in the meanti",
+      "latitude": 50.08533,
+      "longitude": 14.41994,
+      "url": "http://prague-tours-center.com"
+    },
+    {
+      "name": "Running Tours Prague",
+      "type": "do",
+      "description": "Activity for those into running who want to explore the city and stay fit. It shows runners of all abilities around the city's musts while on the run. A traveling runner introduces the best of the Prague to their running",
+      "url": "http://www.runningtoursprague.com",
+      "hours": "available 24/7",
+      "price": "from US$15"
+    }
+  ],
+  "sources": [
+    "https://en.wikivoyage.org/wiki/Prague"
+  ],
+  "license": "Wikivoyage, CC BY-SA 4.0",
+  "retrieved": "2026-10-23"
+}

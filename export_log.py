@@ -1,7 +1,8 @@
-import sqlite3
 import json
+from sqlalchemy import select
 
-DB = "chat_log.db"
+from backend.utility.db import SessionLocal, ChatSession, Message
+
 OUT = "chat_log.txt"
 MAX_RESULT = 90  # max characters of a tool result shown in the text file
 
@@ -35,37 +36,27 @@ def format_result(raw):
     return short(text, MAX_RESULT)
 
 
-conn = sqlite3.connect(DB)
-sessions = conn.execute(
-    "SELECT session_id, started_at FROM sessions ORDER BY started_at"
-).fetchall()
-
 total = 0
-with open(OUT, "w", encoding="utf-8") as f:
-    for sid, started in sessions:
-        f.write(f"SESSION {sid}\nstarted: {started[:19].replace('T', ' ')}\n")
+with SessionLocal() as db, open(OUT, "w", encoding="utf-8") as f:
+    sessions = db.scalars(select(ChatSession).order_by(ChatSession.started_at)).all()
+    for s in sessions:
+        f.write(f"SESSION {s.session_id}\nstarted: {s.started_at[:19].replace('T', ' ')}\n")
         f.write("-" * 70 + "\n")
-        rows = conn.execute(
-            "SELECT timestamp, role, content, tool_name, tool_args, tool_result, error "
-            "FROM messages WHERE session_id=? ORDER BY id",
-            (sid,),
-        ).fetchall()
-        for ts, role, content, tool, args, result, error in rows:
+        for m in s.messages:  # relationship, already ordered by id
             total += 1
-            t = ts[11:19]  # HH:MM:SS
-            if role == "user":
-                f.write(f"\n[{t}] USER: {short(content, 500)}\n")
-            elif role == "tool":
-                if tool == "transfer_to_agent":
-                    target = json.loads(args).get("agent_name") if args else "?"
+            t = m.timestamp[11:19]  # HH:MM:SS
+            if m.role == "user":
+                f.write(f"\n[{t}] USER: {short(m.content, 500)}\n")
+            elif m.role == "tool":
+                if m.tool_name == "transfer_to_agent":
+                    target = json.loads(m.tool_args).get("agent_name") if m.tool_args else "?"
                     f.write(f"[{t}]   -> delegated to {target}\n")
                 else:
-                    res = format_result(result)
-                    f.write(f"[{t}]   tool {tool}({format_args(args)}) => {res}\n")
+                    f.write(f"[{t}]   tool {m.tool_name}({format_args(m.tool_args)}) => {format_result(m.tool_result)}\n")
             else:
-                f.write(f"[{t}] {role.upper()}: {short(content, 500)}\n")
-            if error:
-                f.write(f"[{t}]   ERROR: {error}\n")
+                f.write(f"[{t}] {m.role.upper()}: {short(m.content, 500)}\n")
+            if m.error:
+                f.write(f"[{t}]   ERROR: {m.error}\n")
         f.write("\n")
 
 print(f"Exported {total} messages from {len(sessions)} session(s) to {OUT}")
